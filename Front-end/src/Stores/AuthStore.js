@@ -4,7 +4,8 @@ import RootStore from './RootStore';
 
 export default class AuthStore {
 
-    @observable test = "test";
+    @observable isLogin = false;
+    
     constructor(RootStore) {
         this.rootStore = RootStore; 
 
