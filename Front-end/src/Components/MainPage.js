@@ -11,6 +11,7 @@ export default class MainPage extends Component {
         super(props);
         this.rootStore = this.props.rootStore;
         this.authStore = this.rootStore.authStore;
+        console.log(this.rootStore);
     }
 
     render() {

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 import { Provider } from 'mobx-react';
-import RootStore from './stores/RootStore';
-import AuthStore from './stores/AuthStore';
+import RootStore from './Stores/RootStore';
+import AuthStore from './Stores/AuthStore';
 import MovieRow from './MovieRow.js'
 import $ from 'jquery'
 import Router from './Router/RouterComponent.js';
