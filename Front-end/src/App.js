@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import './App.css';
 import { Provider } from 'mobx-react';
 import RootStore from './Stores/RootStore';
-import AuthStore from './Stores/AuthStore';
-import MovieRow from './MovieRow.js'
-import $ from 'jquery'
 import Router from './Router/RouterComponent.js';
+
+
+// import MovieRow from './MovieRow.js'
+// import $ from 'jquery'
 
 class App extends Component {
   constructor(props) {
