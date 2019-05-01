@@ -14,6 +14,7 @@ class App extends Component {
     this.authStore = this.rootStore.authStore;
 
     this.state = {}
+    this.authStore.load();
 
     // this.performSearch()
   }
