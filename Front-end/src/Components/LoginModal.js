@@ -26,11 +26,11 @@ export default class MainPage extends Component {
     }
 
     googleLogin = () => {
-        alert("Google lOGIN");
+        return this.authStore.signInGoogle();
     }
 
     facebookLogin = () => {
-        alert("Facebook login");
+        return this.authStore.signInFacebook();
     }
 
     render() {

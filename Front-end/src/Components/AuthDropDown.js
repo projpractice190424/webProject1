@@ -18,6 +18,7 @@ export default class AuthDropDown extends Component {
         
         this.handleShow = this.handleShow.bind(this);
         this.handleClose = this.handleClose.bind(this);
+        this.signOut = this.signOut.bind(this);
 
     }
 
@@ -25,17 +26,12 @@ export default class AuthDropDown extends Component {
         this.authStore.isLogin = false;
     }
 
-
     handleShow() {
         this.authStore.isLogin = true;
     }
 
-    googleLogin = () => {
-        alert("Google lOGIN");
-    }
-
-    facebookLogin = () => {
-        alert("Facebook login");
+    signOut() {
+        return this.authStore.firebaseSignOut();
     }
 
     render() {
@@ -48,7 +44,7 @@ export default class AuthDropDown extends Component {
                     <Dropdown.Menu>
                         <Dropdown.Item href="#/action-1">Profile</Dropdown.Item>
                         <Dropdown.Item href="#/action-2"  onClick={() => this.handleShow()}>Sign in</Dropdown.Item>
-                        <Dropdown.Item href="#/action-3">Sign out</Dropdown.Item>
+                        <Dropdown.Item href="#/action-3" onClick={() => this.signOut()}>Sign out</Dropdown.Item>
                     </Dropdown.Menu>
                 </Dropdown>
         );

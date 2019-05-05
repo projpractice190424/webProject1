@@ -8,7 +8,6 @@ class RouterComponent extends React.Component {
             <Router>
                 <div style={{ height: "100vh" }}>
                     <Route exact path="/" component={MainPage} />
-                    {/* <Route exact path="/MainPage" component={MainPage} /> */}
                 </div>
             </Router>
         );
