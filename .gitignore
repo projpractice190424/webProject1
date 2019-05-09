@@ -2,3 +2,4 @@
 # Dependency
 /Front-end/node_modules
 /Back-end/search/node_modules
+/Back-end/search/config

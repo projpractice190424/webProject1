@@ -1,6 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
+const firebase = require('firebsse/app');
+const config = require('./config/devKey');
+
+require("firebase/auth");
+require("firebase/firestore");
+require('firebase/database');
+
+firebase.initializeApp(config.firebaseConfig);
 
 var app = express();
 
