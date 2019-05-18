@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const firebase = require('firebsse/app');
+const firebase = require("firebase/app");
 const config = require('./config/devKey');
 
 require("firebase/auth");
@@ -21,5 +21,5 @@ app.use( (req, res, next) => {
     next();
 });
 
-const port = process.env.PORT || 6000;
+const port = process.env.PORT || 8888;
 app.listen(port, () => console.log("Server is up and running on port: ", port));
