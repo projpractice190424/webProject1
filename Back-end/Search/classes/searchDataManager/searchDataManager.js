@@ -17,6 +17,18 @@ class SearchDataManager {
 
         return result;
     }
+
+    createSearchItem(searchItem) {
+        var result; 
+
+        try {
+            result = this.searchDataAdapter.createSearchItem(searchItem);
+        } catch(err) {
+            throw new Error(err);
+        }
+
+        return result;
+    }
 }
 
 module.exports = SearchDataManager;

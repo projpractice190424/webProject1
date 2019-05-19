@@ -17,8 +17,19 @@ class SearchController {
         return result;
     }
 
-}
+    createSearchItem(searchItem) {
+        var result;
 
+        try {
+             result = this.searchDataManager.createSearchItem(searchItem);
+        } catch(err) {
+            throw new httpExceptionHandler(400, err);
+        }
+
+        return result;
+    }
+
+}
 
 module.exports = SearchController;
 

@@ -1,3 +1,4 @@
+var firebase = require('firebase');
 
 class SearchDataAdapter {
     constructor() {
@@ -22,7 +23,13 @@ class SearchDataAdapter {
      * @throws Exception when there is an issue in connection of the firebase
      */
     createSearchItem(search) {
-
+        firebase.database().ref('/searchItems').set(search)
+            .then((snapshot)=> {
+                console.log(snapshot.val());
+                
+            }, (err) => {
+                throw new Error(err);
+            });
     }
 
     /**
@@ -46,3 +53,5 @@ class SearchDataAdapter {
 
     }
 }
+
+module.exports = SearchDataAdapter;
