@@ -1,11 +1,10 @@
 
 class SearchDataManager {
-    constructor(searchDataAdapter, locationManager){ 
+    constructor(searchDataAdapter){ 
         this.searchDataAdapter = searchDataAdapter;
-        this.locationManager = locationManager;
     }
 
-    searchByWord(search) {
+    searchByWord(search, locationManager) {
         var result;
 
         try {
