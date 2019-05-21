@@ -11,7 +11,7 @@ class LocationManager {
 
      /**
      * With given geocordinates, Calculate a distance between the current location
-     * @param {string} targetLocation - Target geocordinates.
+     * @param {Location} targetLocation - Target geocordinates.
      */
     getDistanceBetweenTwoPoints(targetLocation) {
         if(this.currentLocation) {
