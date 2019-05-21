@@ -8,10 +8,10 @@ class SearchController {
 
     searchByRequest(search) {
         var result;
-        var locationManager = new LocationManager(search.location);
+        // var locationManager = new LocationManager(search.location);
 
         try { 
-            result = this.searchDataManager.searchByWord(search, locationManager);
+            result = this.searchDataManager.searchByWord(search);
         } catch(err) {
             throw new httpExceptionHandler(400, err);
         }
